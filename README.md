@@ -1,4 +1,4 @@
-> The example repository is maintained from a [monorepo](https://github.com/nextauthjs/next-auth/tree/main/apps/examples/sveltekit). Pull Requests should be opened against [`nextauthjs/next-auth`](https://github.com/nextauthjs/next-auth).
+> Fork of the official SvelteKit Auth example for [Auth.js](https://sveltekit.authjs.dev)
 
 <p align="center">
    <br/>
@@ -8,7 +8,10 @@
    <a href="https://kit.svelte.dev" target="_blank">
    <img height="64" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" />
    </a>
-   <h3 align="center"><b>SvelteKit Auth</b> - Example App</h3>
+    <a href="https://neo4j.com">
+    <img height="64" src="https://dist.neo4j.com/wp-content/uploads/20210423072428/neo4j-logo-2020-1.svg">
+    </a>
+   <h3 align="center"><b>SvelteKit Auth Neo4j</b> - Example App</h3>
    <p align="center">
    Open Source. Full Stack. Own Your Data.
    </p>
@@ -30,10 +33,13 @@
 
 ## Overview
 
-This is the official SvelteKit Auth example for [Auth.js](https://sveltekit.authjs.dev).
+This is a fork of the official SvelteKit Auth example for [Auth.js](https://sveltekit.authjs.dev), to show how to use it
+with Neo4j adapter.
 
 ## Getting started
 
-You can instantly deploy this example to [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=sveltekit-auth-example) by clicking the following button.
+You can instantly deploy this example
+to [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=sveltekit-auth-example) by clicking the
+following button.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/nextauthjs/sveltekit-auth-example&project-name=sveltekit-auth-example&repository-name=sveltekit-auth-example)

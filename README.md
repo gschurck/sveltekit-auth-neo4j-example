@@ -39,6 +39,8 @@ with Neo4j adapter.
 ## Neo4j Adapter
 
 ```typescript
+// hooks.server.ts
+
 import { SvelteKitAuth } from "@auth/sveltekit"
 import GitHub from "@auth/core/providers/github"
 import { GITHUB_ID, GITHUB_SECRET, NEO4J_PASSWORD, NEO4J_URI, NEO4J_USER } from "$env/static/private"
@@ -56,3 +58,7 @@ export const handle = SvelteKitAuth({
   adapter: Neo4jAdapter(neo4jSession),
 })
 ```
+
+The adapter automatically synchronizes users with the Neo4j database on login :
+
+![image](https://user-images.githubusercontent.com/21091232/214818070-393fd653-4bcf-40dc-8f0c-9d59efc60051.png)

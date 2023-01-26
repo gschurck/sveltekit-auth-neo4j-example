@@ -36,10 +36,23 @@
 This is a fork of the official SvelteKit Auth example for [Auth.js](https://sveltekit.authjs.dev), to show how to use it
 with Neo4j adapter.
 
-## Getting started
+## Neo4j Adapter
 
-You can instantly deploy this example
-to [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=sveltekit-auth-example) by clicking the
-following button.
+```typescript
+import { SvelteKitAuth } from "@auth/sveltekit"
+import GitHub from "@auth/core/providers/github"
+import { GITHUB_ID, GITHUB_SECRET, NEO4J_PASSWORD, NEO4J_URI, NEO4J_USER } from "$env/static/private"
+import neo4j from "neo4j-driver"
+import { Neo4jAdapter } from "@next-auth/neo4j-adapter"
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/nextauthjs/sveltekit-auth-example&project-name=sveltekit-auth-example&repository-name=sveltekit-auth-example)
+const driver = neo4j.driver(
+  NEO4J_URI,
+  neo4j.auth.basic(NEO4J_USER, NEO4J_PASSWORD)
+)
+
+const neo4jSession = driver.session()
+export const handle = SvelteKitAuth({
+  providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })],
+  adapter: Neo4jAdapter(neo4jSession),
+})
+```

@@ -9,7 +9,7 @@
    <img height="64" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" />
    </a>
     <a href="https://neo4j.com">
-    <img height="64" src="https://dist.neo4j.com/wp-content/uploads/20210423072428/neo4j-logo-2020-1.svg">
+    <img height="64px" src="https://dist.neo4j.com/wp-content/uploads/20210423110631/neo4j-new-logo-2021.jpg.png">
     </a>
    <h3 align="center"><b>SvelteKit Auth Neo4j</b> - Example App</h3>
    <p align="center">

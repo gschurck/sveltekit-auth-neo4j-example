@@ -11,8 +11,7 @@ const driver = neo4j.driver(
 
 const neo4jSession = driver.session()
 export const handle = SvelteKitAuth({
-    //@ts-expect-error
+    // @ts-ignore
     providers: [GitHub({clientId: GITHUB_ID, clientSecret: GITHUB_SECRET})],
-    //@ts-expect-error
     adapter: Neo4jAdapter(neo4jSession),
 })
